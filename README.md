@@ -4,11 +4,11 @@ Add Dropzone support for [Laravel Backpack](https://laravel-backpack.readme.io/d
 
 ## Requirements
 - [Laravel Backpack](https://laravel-backpack.readme.io/docs)
-	- [Installation](https://backpackforlaravel.com/docs/4.0/installation "Installation")
+	- [Installation](https://backpackforlaravel.com/docs/5.x/installation "Installation")
 	- [Getting Started](https://backpackforlaravel.com/docs/4.0/introduction "Getting Started")
-- [Spatie Laravel Medialibrary](https://spatie.be/docs/laravel-medialibrary/v9/introduction)
-	- [Installation & setup](https://spatie.be/docs/laravel-medialibrary/v9/installation-setup "Installation & setup")
-	- [Basic usage - Preparing your model](https://spatie.be/docs/laravel-medialibrary/v9/basic-usage/preparing-your-model "Basic usage - Preparing your model")
+- [Spatie Laravel Medialibrary](https://spatie.be/docs/laravel-medialibrary/v10/introduction)
+	- [Installation & setup](https://spatie.be/docs/laravel-medialibrary/v10/installation-setup "Installation & setup")
+	- [Basic usage - Preparing your model](https://spatie.be/docs/laravel-medialibrary/v10/basic-usage/preparing-your-model "Basic usage - Preparing your model")
 
 ## Limitations
 Currently, you can only manage media while editing an entry.
@@ -18,7 +18,7 @@ Currently, you can only manage media while editing an entry.
 ### Via Composer
 
 ``` bash
-composer require julienmru/laravel-backpack-dropzone-field:3.0.0
+composer require julienmru/laravel-backpack-dropzone-field
 ```
 
 Publish assets:
