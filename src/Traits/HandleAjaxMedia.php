@@ -1,10 +1,10 @@
 <?php
 
-namespace Gaspertrix\Backpack\DropzoneField\Traits;
+namespace JulienMru\BackpackDropzoneField\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Spatie\MediaLibrary\Models\Media;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 trait HandleAjaxMedia
 {

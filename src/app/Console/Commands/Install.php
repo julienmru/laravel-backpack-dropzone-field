@@ -1,9 +1,8 @@
 <?php
 
-namespace Gaspertrix\Backpack\DropzoneField\App\Console\Commands;
+namespace JulienMru\BackpackDropzoneField\app\Console\Commands;
 
 use Illuminate\Console\Command;
-use Symfony\Component\Process\Process;
 use Backpack\CRUD\app\Console\Commands\Install as BaseInstall;
 
 class Install extends BaseInstall
@@ -15,7 +14,7 @@ class Install extends BaseInstall
      *
      * @var string
      */
-    protected $signature = 'gaspertrix:backpack:dropzone:install
+    protected $signature = 'julienmru:backpackdropzonefield:install
                                 {--timeout=300 : How many seconds to allow each process to run.}
                                 {--debug : Show process output or not. Useful for debugging. }';
 
@@ -27,16 +26,6 @@ class Install extends BaseInstall
     protected $description = 'Publish assets for Dropzone field';
 
     /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    /**
      * Execute the console command.
      *
      * @return mixed
@@ -45,22 +34,22 @@ class Install extends BaseInstall
     {
         $this->progressBar = $this->output->createProgressBar(2);
         $this->progressBar->start();
-        $this->info(' Gaspertrix\Backpack\DropzoneField installation started. Please wait...');
+        $this->info(' JulienMru\BackpackDropzoneField installation started. Please wait...');
         $this->progressBar->advance();
 
         $this->line(' Publishing assets');
         $this->executeArtisanProcess('vendor:publish', [
-            '--provider' => 'Gaspertrix\Backpack\DropzoneField\DropzoneFieldServiceProvider',
+            '--provider' => 'JulienMru\BackpackDropzoneField\DropzoneFieldServiceProvider',
             '--tag' => 'public',
         ]);
 
         $this->line(' Publishing views');
         $this->executeArtisanProcess('vendor:publish', [
-            '--provider' => 'Gaspertrix\Backpack\DropzoneField\DropzoneFieldServiceProvider',
+            '--provider' => 'JulienMru\BackpackDropzoneField\DropzoneFieldServiceProvider',
             '--tag' => 'views',
         ]);
 
         $this->progressBar->finish();
-        $this->info(" Gaspertrix\Backpack\DropzoneField successfully installed.");
+        $this->info(" JulienMru\BackpackDropzoneField successfully installed.");
     }
 }
